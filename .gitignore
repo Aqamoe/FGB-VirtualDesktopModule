@@ -1,0 +1,9 @@
+build/
+out/
+.vs/
+*.user
+.sdk-cache/
+node_modules/
+
+# 上游参考源码只留本地核对用，不随仓库分发
+.tmp-upstream/

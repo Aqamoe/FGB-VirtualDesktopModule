@@ -1,0 +1,14 @@
+{
+  "ModuleId": "com.fgbbridge.virtual-desktop",
+  "ModuleName": "Virtual Desktop",
+  "AuthorName": "Aqamoe (光水)",
+  "Version": "0.1.0",
+  "ModuleDescription": "读取 Virtual Desktop 串流端转发的命名共享内存 VirtualDesktop.BodyState，输出 Unified Expressions 表情、逐眼睁眼度与注视方向。不需要 VRCFT，不注入进程。",
+  "UsageInstructions": "1. 电脑端安装并运行 Virtual Desktop Streamer（版本 ≥1.30），在串流设置里开启「Forward tracking data to PC」（面部追踪转发）。2. 头显侧进入 Virtual Desktop 设置启用面部追踪/面捕（需头显本身支持眼动，如 Quest Pro），并按 VD 文档启动一次面捕会话。3. 关闭 VRCFaceTracking：它的 Virtual Desktop 模块与本模块读同一命名对象。4. 在「模块」页把 Virtual Desktop 设为启动并重启引擎，戴上头显开始串流后模块卡片应显示活跃。注意：该链路依赖未公开的 VD 内部格式，本模块为社区未验证（untested）实现，VD 更新可能改变结构体布局。",
+  "ModulePageUrl": "https://github.com/Aqamoe/FGB-VirtualDesktopModule",
+  "ModuleIcon": "icon.svg",
+  "DllFileName": "virtual-desktop.dll",
+  "AbiVersion": 2,
+  "Capabilities": ["expression", "eyes", "gaze"],
+  "RoleHint": "expression"
+}

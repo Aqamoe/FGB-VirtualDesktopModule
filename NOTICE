@@ -1,0 +1,19 @@
+FGB VirtualDesktopModule
+Copyright 2026 Aqamoe (光水)
+
+This product includes a copy of fgb_module_api.h from FaceGaze Bridge
+(https://github.com/Aqamoe/FaceGaze-Bridge), licensed under the Apache
+License, Version 2.0. The header is resolved at build time from the release
+pinned in sdk.lock.json; this repository does not contain a copy of it.
+
+The shared-memory field layout (VirtualDesktop.BodyState / FaceState at
+offset 0, 360 bytes), the 70 expression weight indices, the gating flags,
+the eye-openness formula and the mapping to Unified Expressions were
+informed by the MIT-licensed VRCFT module
+VirtualDesktop.VRCFaceTracking (https://github.com/guygodin/VirtualDesktop.VRCFaceTracking)
+by Virtual Desktop, Inc. This repository is an independent C++ implementation
+of that wire format and contains none of its source code; the upstream
+sources were consulted read-only under .tmp-upstream/ (not distributed).
+
+Virtual Desktop is a trademark of Virtual Desktop, Inc. This project is not
+affiliated with or endorsed by Virtual Desktop, Inc.

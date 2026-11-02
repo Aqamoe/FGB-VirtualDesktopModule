@@ -1,0 +1,20 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  module:
+    uses: Aqamoe/FGB-Module-Kit/.github/workflows/module-ci.yml@v0.4.0
+    with:
+      # 冒烟程序自建 VirtualDesktop.BodyState 映射 + 命名事件驱动真实 ABI 端到端，
+      # GitHub 的 Windows runner 上没有 VD Streamer，不会撞名。
+      run_smoke: true
+    secrets: inherit
